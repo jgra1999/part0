@@ -32,4 +32,11 @@ sequenceDiagram
     activate Server
     Server-->>Browser: the JavaScript file
     deactivate Server
+
+    Browser->>Server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    activate Server
+    Server-->>Browser: [{ "content": "hello there", "date": "2024-12-15T16:46:17.153Z" }, ... ]
+    deactivate Server
+
+    Note right of Browser: The browser executes the callback function that renders the notes
 ```
